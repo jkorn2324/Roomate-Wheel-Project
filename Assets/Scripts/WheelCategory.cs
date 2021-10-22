@@ -4,18 +4,16 @@ using UnityEngine;
 
 namespace RoomateWheel
 {
-    public class WheelCategory : MonoBehaviour
+    [CreateAssetMenu(fileName = "Wheel Category", menuName = "RoomateWheel/Wheel Category")]
+    public class WheelCategory : ScriptableObject
     {
-        // Start is called before the first frame update
-        void Start()
-        {
-        
-        }
+        [SerializeField]
+        private new string name;
+        [SerializeField, TextArea(3, 10)]
+        private string description;
 
-        // Update is called once per frame
-        void Update()
-        {
-        
-        }
+        public string Name => name;
+
+        public string Description => description;
     }
 }
